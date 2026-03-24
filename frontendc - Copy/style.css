@@ -1,0 +1,104 @@
+/* Premium dark‑mode glassmorphism UI */
+:root {
+  --bg-color: #0f0f0f;
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --primary: hsl(210, 80%, 60%);
+  --text: #e0e0e0;
+  --accent: hsl(45, 90%, 55%);
+  --border-radius: 12px;
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+.container {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+input[type="file"], select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #444;
+  border-radius: var(--border-radius);
+  background: #111;
+  color: var(--text);
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.progress-bar {
+  width: 100%;
+  background: #222;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 20px;
+  margin-top: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+#downloadLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#downloadLink:hover {
+  text-decoration: underline;
+}

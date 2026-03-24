@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Video Converter</h1>
+    <form id="uploadForm">
+      <label for="videoFile">Select video:</label>
+      <input type="file" id="videoFile" name="video" accept="video/*" required />
+
+      <label for="format">Target format:</label>
+      <select id="format" name="format">
+        <option value="mp4">MP4</option>
+        <option value="webm">WebM</option>
+        <option value="avi">AVI</option>
+      </select>
+
+      <label for="compression">Compression:</label>
+      <select id="compression" name="compression">
+        <option value="low">Low (small size)</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High (best quality)</option>
+      </select>
+
+      <button type="submit">Convert</button>
+    </form>
+
+    <div id="progressContainer" class="hidden">
+      <p>Conversion progress:</p>
+      <div class="progress-bar">
+        <div id="progressBar" class="progress"></div>
+      </div>
+      <p id="statusText"></p>
+    </div>
+
+    <div id="downloadLinkContainer" class="hidden">
+      <a id="downloadLink" href="#" download>Download Converted Video</a>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
