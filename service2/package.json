@@ -1,0 +1,15 @@
+{
+  "name": "service2",
+  "version": "1.0.0",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "aws-sdk": "^2.1470.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "ffmpeg-static": "^5.1.0",
+    "dotenv": "^16.3.1"
+  }
+}
